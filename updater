@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -p logs/updater
+nohup python -u updater.py &> logs/updater/$(date +"%Y_%m_%d").log &

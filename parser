@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -p logs/parser
+nohup python -u openapi/parser.py &> logs/parser/$(date +"%Y_%m_%d").log &

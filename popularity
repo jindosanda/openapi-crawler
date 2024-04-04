@@ -1,0 +1,12 @@
+#!/bin/bash
+mkdir -p logs/popularity
+# accept --continue parameter to continue from last time and get the date as $2
+if [ "$1" == "--continue" ]; then
+    echo "Continue from last time"
+    nohup python -u popularity.py --continue $2 &> logs/popularity/$(date +"%Y_%m_%d").log &
+    exit
+else
+    echo "Start from beginning"
+    nohup python -u popularity.py &> logs/popularity/$(date +"%Y_%m_%d").log &
+fi
+

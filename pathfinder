@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -p logs/pathfinder
+nohup python -u pathfinder.py &> logs/pathfinder/$(date +"%Y_%m_%d").log &

@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -p logs/bundler
+nohup python -u openapi/bundler.py &> logs/bundler/$(date +"%Y_%m_%d").log &

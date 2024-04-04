@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -p logs/validator
+nohup python -u openapi/validator.py &> logs/validator/$(date +"%Y_%m_%d").log &

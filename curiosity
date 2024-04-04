@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -p logs/curiosity
+nohup python -u curiosity.py &> logs/curiosity/$(date +"%Y_%m_%d").log &
